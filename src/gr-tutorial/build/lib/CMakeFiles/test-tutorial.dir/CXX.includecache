@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rslab/src/gr-tutorial/lib/qa_tutorial.cc
+qa_tutorial.h
+/home/rslab/src/gr-tutorial/lib/qa_tutorial.h
+
+/home/rslab/src/gr-tutorial/lib/qa_tutorial.h
+gnuradio/attributes.h
+-
+cppunit/TestSuite.h
+-
+
+/home/rslab/src/gr-tutorial/lib/test_tutorial.cc
+config.h
+/home/rslab/src/gr-tutorial/lib/config.h
+cppunit/TextTestRunner.h
+-
+cppunit/XmlOutputter.h
+-
+gnuradio/unittests.h
+-
+qa_tutorial.h
+/home/rslab/src/gr-tutorial/lib/qa_tutorial.h
+iostream
+-
+fstream
+-
+
