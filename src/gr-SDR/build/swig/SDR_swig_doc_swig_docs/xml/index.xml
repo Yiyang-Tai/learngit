@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1SDR_1_1Ramdom__Bit__Generator" kind="class"><name>gr::SDR::Ramdom_Bit_Generator</name>
+    <member refid="classgr_1_1SDR_1_1Ramdom__Bit__Generator_1a4fe50d64f59f320ab3892a2658719d71" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1SDR_1_1Ramdom__Bit__Generator_1ae6977e72b0f1c7afc052597442a63bbd" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1SDR" kind="namespace"><name>gr::SDR</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1ae0225ef3520b42d4993449fd9805d7e5" kind="define"><name>SDR_API</name></member>
+  </compound>
+  <compound refid="Ramdom__Bit__Generator_8h" kind="file"><name>Ramdom_Bit_Generator.h</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_d803a9d4165407b415526bd15a0c374a" kind="dir"><name>SDR</name>
+  </compound>
+</doxygenindex>

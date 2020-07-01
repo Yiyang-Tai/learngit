@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="Ramdom__Bit__Generator__impl_8h" kind="file" language="C++">
+    <compoundname>Ramdom_Bit_Generator_impl.h</compoundname>
+    <includes refid="Ramdom__Bit__Generator_8h" local="no">SDR/Ramdom_Bit_Generator.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>SDR/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="18">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="15">
+        <label>Ramdom_Bit_Generator_impl.h</label>
+        <link refid="Ramdom__Bit__Generator__impl_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SDR/Ramdom_Bit_Generator.h</label>
+        <link refid="Ramdom__Bit__Generator_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1SDR_1_1Ramdom__Bit__Generator__impl" prot="public">gr::SDR::Ramdom_Bit_Generator_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1SDR">gr::SDR</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rslab/src/gr-SDR/lib/Ramdom_Bit_Generator_impl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rslab/src/gr-SDR/lib/qa_SDR.cc
+qa_SDR.h
+/home/rslab/src/gr-SDR/lib/qa_SDR.h
+
+/home/rslab/src/gr-SDR/lib/qa_SDR.h
+gnuradio/attributes.h
+-
+cppunit/TestSuite.h
+-
+
+/home/rslab/src/gr-SDR/lib/test_SDR.cc
+config.h
+/home/rslab/src/gr-SDR/lib/config.h
+cppunit/TextTestRunner.h
+-
+cppunit/XmlOutputter.h
+-
+gnuradio/unittests.h
+-
+qa_SDR.h
+/home/rslab/src/gr-SDR/lib/qa_SDR.h
+iostream
+-
+fstream
+-
+
