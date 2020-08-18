@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SDR/Random_Bits_Generator.h
+SDR/api.h
+-
+gnuradio/block.h
+-
+
+../include/SDR/api.h
+gnuradio/attributes.h
+-
+
+/home/rslab/src/gr-SDR/lib/Random_Bits_Generator_impl.cc
+config.h
+/home/rslab/src/gr-SDR/lib/config.h
+gnuradio/io_signature.h
+-
+Random_Bits_Generator_impl.h
+/home/rslab/src/gr-SDR/lib/Random_Bits_Generator_impl.h
+
+/home/rslab/src/gr-SDR/lib/Random_Bits_Generator_impl.h
+SDR/Random_Bits_Generator.h
+-
+

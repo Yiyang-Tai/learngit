@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<block>
+  <name>symbol_mapper</name>
+  <key>sdrcourse_symbol_mapper</key>
+  <category>[sdrcourse]</category>
+  <import>import sdrcourse</import>
+  <make>sdrcourse.symbol_mapper($modtype, $symbol_values)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Modulaton</name>
+    <key>modtype</key>
+    <type>enum</type>
+    <option>
+        <name>BPSK</name>
+        <key>sdrcourse.BPSK</key>
+    </option>
+    <option>
+        <name>Pi/2BPSK</name>
+        <key>sdrcourse.P2BPSK</key>
+    </option>
+    <option>
+        <name>QPSK</name>
+        <key>sdrcourse.QPSK</key>
+    </option>
+    <option>
+        <name>8PSK</name>
+        <key>sdrcourse.PSK8</key>
+    </option>
+    <option>
+        <name>QAM16</name>
+        <key>sdrcourse.QAM16</key>
+    </option>
+    <option>
+        <name>PAM4</name>
+        <key>sdrcourse.PAM4</key>
+    </option>
+  </param>
+
+  <param>
+    <name>Symbol Values</name>
+    <key>symbol_values</key>
+    <value>[0,1]</value>
+    <type>int_vector</type>
+  </param>
+
+  <sink>
+    <name>IN</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>OUT</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

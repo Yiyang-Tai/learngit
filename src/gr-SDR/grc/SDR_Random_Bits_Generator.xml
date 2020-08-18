@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<block>
+  <name>Random_Bits_Generator</name>
+  <key>SDR_Random_Bits_Generator</key>
+  <category>[SDR]</category>
+  <import>import SDR</import>
+  <import>import pmt</import>
+  <make>SDR.Random_Bits_Generator($length, $ratio)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Length</name>
+    <key>length</key>
+    <value>50</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Ratio</name>
+    <key>ratio</key>
+    <value>0.5</value>
+    <type>float</type>
+  </param>
+
+  <sink>
+    <name>generate</name>
+    <type>message</type>
+  <optional>1</optional>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>message</type>
+  <optional>1</optional>
+  </source>
+</block>
