@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<block>
+  <name>baseband_derotation</name>
+  <key>sdrcourse_baseband_derotation</key>
+  <category>[sdrcourse]</category>
+  <import>import sdrcourse</import>
+  <make>sdrcourse.baseband_derotation($mu, $symbol_values)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Mu</name>
+    <key>mu</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Symbol Values</name>
+    <key>symbol_values</key>
+    <value>[0,1]</value>
+    <type>int_vector</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

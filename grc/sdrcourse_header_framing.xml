@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<block>
+  <name>header_framing</name>
+  <key>sdrcourse_header_framing</key>
+  <category>[sdrcourse]</category>
+  <import>import sdrcourse</import>
+  <make>sdrcourse.header_framing($destination_address, $source_address, $frame_type, $frame_index, $reserved_field_I, $reserved_field_II, $modulation, $len_payload_length, $len_num_transmission)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Frame type</name>
+    <key>frame_type</key>
+    <type>enum</type>
+    <hide>none</hide>
+    <option>
+      <name>DATA frame</name>
+      <key>1</key>
+      <opt>hide_data:part</opt>
+      <opt>hide_ack:all</opt>
+    </option>
+    <option>
+      <name>ACK frame</name>
+      <key>2</key>
+      <opt>hide_data:all</opt>
+      <opt>hide_ack:part</opt>
+    </option>
+  </param>
+  <param>
+    <name>Initial frame index</name>
+    <key>frame_index</key>
+    <value>0</value>
+    <type>int</type>
+    <hide>$frame_type.hide_data</hide>
+  </param>
+   <param>
+    <name>Destination address</name>
+    <key>destination_address</key>
+    <value>destination_address</value>
+    <type>int</type>
+    <hide>$frame_type.hide_data</hide>
+  </param>
+  <param>
+    <name>Source address</name>
+    <key>source_address</key>
+    <value>source_address</value>
+    <type>int</type>
+    <hide>part</hide>
+  </param>
+  <param>
+    <name>Set reserved field</name>
+    <key>set_reserved_field</key>
+    <value>1</value>
+    <type>enum</type>
+    <hide>part</hide>
+    <option>
+      <name>On</name>
+      <key>0</key>
+      <opt>hide:part</opt>
+    </option>
+    <option>
+      <name>Off</name>
+      <key>1</key>
+      <opt>hide:all</opt>
+    </option>
+  </param>
+  <param>
+    <name>Reserved field I</name>
+    <key>reserved_field_I</key>
+    <value>118</value>
+    <type>int</type>
+    <hide>$set_reserved_field.hide</hide>
+  </param>
+  <param>
+    <name>Reserved field II</name>
+    <key>reserved_field_II</key>
+    <value>124</value>
+    <type>int</type>
+    <hide>$set_reserved_field.hide</hide>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>
