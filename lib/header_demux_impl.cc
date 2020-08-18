@@ -57,6 +57,7 @@ namespace gr {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
     }
 
+
     int
     header_demux_impl::general_work (int noutput_items,
                        gr_vector_int &ninput_items,
