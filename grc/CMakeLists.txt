@@ -29,9 +29,9 @@ install(FILES
     sdrcourse_framing.xml
     sdrcourse_header_framing.xml
     sdrcourse_crc_add.xml
-    sdrcourse_frame_sync.xml
     sdrcourse_mix.xml
     sdrcourse_rotator.xml
     sdrcourse_baseband_derotation.xml
-    sdrcourse_header_demux.xml DESTINATION share/gnuradio/grc/blocks
+    sdrcourse_demod.xml
+    sdrcourse_header_payload_demux.xml DESTINATION share/gnuradio/grc/blocks
 )

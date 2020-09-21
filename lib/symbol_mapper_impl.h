@@ -24,6 +24,7 @@
 #include <sdrcourse/symbol_mapper.h>
 #include <gnuradio/block.h>
 
+
 namespace gr {
   namespace sdrcourse {
 	

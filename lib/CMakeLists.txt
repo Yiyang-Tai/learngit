@@ -36,11 +36,11 @@ list(APPEND sdrcourse_sources
     framing_impl.cc
     header_framing_impl.cc
     crc_add_impl.cc
-    frame_sync_impl.cc
     mix_impl.cc
     rotator_impl.cc
     baseband_derotation_impl.cc
-    header_demux_impl.cc )
+    demod_impl.cc
+    header_payload_demux_impl.cc )
 
 set(sdrcourse_sources "${sdrcourse_sources}" PARENT_SCOPE)
 if(NOT sdrcourse_sources)

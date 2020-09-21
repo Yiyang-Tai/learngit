@@ -18,11 +18,11 @@
 #include "sdrcourse/framing.h"
 #include "sdrcourse/header_framing.h"
 #include "sdrcourse/crc_add.h"
-#include "sdrcourse/frame_sync.h"
 #include "sdrcourse/mix.h"
 #include "sdrcourse/rotator.h"
 #include "sdrcourse/baseband_derotation.h"
-#include "sdrcourse/header_demux.h"
+#include "sdrcourse/demod.h"
+#include "sdrcourse/header_payload_demux.h"
 %}
 
 %include "sdrcourse/start_pending.h"
@@ -48,8 +48,7 @@ GR_SWIG_BLOCK_MAGIC2(sdrcourse, framing);
 GR_SWIG_BLOCK_MAGIC2(sdrcourse, header_framing);
 %include "sdrcourse/crc_add.h"
 GR_SWIG_BLOCK_MAGIC2(sdrcourse, crc_add);
-%include "sdrcourse/frame_sync.h"
-GR_SWIG_BLOCK_MAGIC2(sdrcourse, frame_sync);
+
 
 %include "sdrcourse/mix.h"
 GR_SWIG_BLOCK_MAGIC2(sdrcourse, mix);
@@ -57,5 +56,8 @@ GR_SWIG_BLOCK_MAGIC2(sdrcourse, mix);
 GR_SWIG_BLOCK_MAGIC2(sdrcourse, rotator);
 %include "sdrcourse/baseband_derotation.h"
 GR_SWIG_BLOCK_MAGIC2(sdrcourse, baseband_derotation);
-%include "sdrcourse/header_demux.h"
-GR_SWIG_BLOCK_MAGIC2(sdrcourse, header_demux);
+
+%include "sdrcourse/demod.h"
+GR_SWIG_BLOCK_MAGIC2(sdrcourse, demod);
+%include "sdrcourse/header_payload_demux.h"
+GR_SWIG_BLOCK_MAGIC2(sdrcourse, header_payload_demux);

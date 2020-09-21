@@ -33,9 +33,9 @@ install(FILES
     framing.h
     header_framing.h
     crc_add.h
-    frame_sync.h
     mix.h
     rotator.h
     baseband_derotation.h
-    header_demux.h DESTINATION include/sdrcourse
+    demod.h
+    header_payload_demux.h DESTINATION include/sdrcourse
 )

@@ -24,19 +24,25 @@
 
 #include <gnuradio/io_signature.h>
 #include "symbol_mapper_impl.h"
+#include <gnuradio/math.h>
+
+#define SQRT_TWO 0.707107
 
 
-
+float angle = M_PI / 8.0;
+const float level = sqrt(float(0.1));
 
 const gr_complex sym_bpsk[] = {gr_complex(1,0), gr_complex(-1,0)};
 const gr_complex sym_bpsk_off[] = {gr_complex(0,1), gr_complex(0,-1)};
-const gr_complex sym_qpsk[] = {gr_complex(1,0), gr_complex(0,1), gr_complex(-1,0), gr_complex(0,-1)};
-const gr_complex sym_8psk[] = {gr_complex(1,0), gr_complex(M_SQRT1_2, M_SQRT1_2), gr_complex(0,1), gr_complex(-M_SQRT1_2, M_SQRT1_2), gr_complex(-1,0), gr_complex(-M_SQRT1_2, -M_SQRT1_2), gr_complex(0,-1), gr_complex(M_SQRT1_2, -M_SQRT1_2)};
+const gr_complex sym_qpsk[] = {gr_complex(-SQRT_TWO, -SQRT_TWO), gr_complex(SQRT_TWO, -SQRT_TWO), gr_complex(-SQRT_TWO, SQRT_TWO), gr_complex(SQRT_TWO, SQRT_TWO)};
+
+const gr_complex sym_8psk[] = {gr_complex(cos(1 * angle), sin(1 * angle)), gr_complex(cos(7 * angle), sin(7 * angle)), gr_complex(cos(9 * angle), sin(9 * angle)), gr_complex(cos(15 * angle), sin(15 * angle)), gr_complex(cos(11 * angle), sin(11 * angle)), gr_complex(cos(13 * angle), sin(13 * angle)), gr_complex(cos(3 * angle), sin(3 * angle)), gr_complex(cos(5 * angle), sin(5 * angle))};
 const gr_complex sym_pam4[] = {gr_complex(-3,0), gr_complex(-1,0), gr_complex(3,0), gr_complex(1,0)};
-const gr_complex sym_qam16[]= {gr_complex(-3,3), gr_complex(-1,3), gr_complex(1,3), gr_complex(3,3),
-        gr_complex(-3,1), gr_complex(-1,1), gr_complex(1,1), gr_complex(3,1),
-        gr_complex(-3,-1), gr_complex(-1,-1), gr_complex(1,-1), gr_complex(3,-1),
-        gr_complex(-3,-3), gr_complex(-1,-3), gr_complex(1,-3), gr_complex(3,-3)};
+
+const gr_complex sym_qam16[]= {gr_complex(3 * level, -3 * level), gr_complex(-1 * level, -3 * level), gr_complex(3 * level, 1 * level), gr_complex(-1 * level, 1 * level),
+        gr_complex(-3 * level, -3 * level), gr_complex(1 * level, -3 * level), gr_complex(-3 * level, 1 * level), gr_complex(1 * level, 1 * level),
+        gr_complex(-1 * level, -1 * level), gr_complex(3 * level, -1 * level), gr_complex(-1 * level, 3 * level), gr_complex(3 * level, 3 * level),
+        gr_complex(1 * level, -1 * level), gr_complex(-3 * level, -1 * level), gr_complex(1 * level, 3 * level), gr_complex(-3 * level, 3 * level)};
 
 
 namespace gr {
