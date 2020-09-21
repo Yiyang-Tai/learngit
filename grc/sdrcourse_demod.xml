@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<block>
+  <name>demod</name>
+  <key>sdrcourse_demod</key>
+  <category>[sdrcourse]</category>
+  <import>import sdrcourse</import>
+  <make>sdrcourse.demod($modtype, $symbol_values)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Modulaton</name>
+    <key>modtype</key>
+    <type>enum</type>
+    <option>
+        <name>BPSK</name>
+        <key>sdrcourse.BPSK</key>
+    </option>
+    <option>
+        <name>Pi/2BPSK</name>
+        <key>sdrcourse.P2BPSK</key>
+    </option>
+    <option>
+        <name>QPSK</name>
+        <key>sdrcourse.QPSK</key>
+    </option>
+    <option>
+        <name>8PSK</name>
+        <key>sdrcourse.PSK8</key>
+    </option>
+    <option>
+        <name>QAM16</name>
+        <key>sdrcourse.QAM16</key>
+    </option>
+    <option>
+        <name>PAM4</name>
+        <key>sdrcourse.PAM4</key>
+    </option>
+  </param>
+
+  <param>
+    <name>Symbol Values</name>
+    <key>symbol_values</key>
+    <value>[0,1]</value>
+    <type>int_vector</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>
