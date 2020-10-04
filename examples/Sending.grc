@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?grc format='1' created='3.7.14'?>
 <flow_graph>
-  <timestamp>Sun Jul  5 13:53:31 2020</timestamp>
+  <timestamp>Sun Oct  4 10:21:45 2020</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -101,7 +101,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 84)</value>
+      <value>(8, 160)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -110,6 +110,33 @@
     <param>
       <key>id</key>
       <value>samp_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>32000</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(448, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>samp_rate_0</value>
     </param>
     <param>
       <key>value</key>
@@ -136,7 +163,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(128, 164)</value>
+      <value>(192, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -187,7 +214,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 364)</value>
+      <value>(520, 436)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +261,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 428)</value>
+      <value>(736, 324)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -281,7 +308,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 504)</value>
+      <value>(232, 432)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -336,7 +363,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1088, 316)</value>
+      <value>(696, 404)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -395,7 +422,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(200, 60)</value>
+      <value>(192, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -426,7 +453,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(200, 12)</value>
+      <value>(320, 20)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -477,7 +504,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 124)</value>
+      <value>(952, 404)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -541,14 +568,10 @@
     </param>
   </block>
   <block>
-    <key>sdrcourse_framer</key>
+    <key>sdrcourse_crc_add</key>
     <param>
       <key>alias</key>
       <value></value>
-    </param>
-    <param>
-      <key>blocksize</key>
-      <value>1024</value>
     </param>
     <param>
       <key>comment</key>
@@ -564,7 +587,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(904, 172)</value>
+      <value>(824, 168)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -572,7 +595,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>sdrcourse_framer_0</value>
+      <value>sdrcourse_crc_add_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -584,7 +607,7 @@
     </param>
   </block>
   <block>
-    <key>sdrcourse_matched_filter</key>
+    <key>sdrcourse_mix</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -603,15 +626,15 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(104, 572)</value>
+      <value>(168, 288)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>270</value>
     </param>
     <param>
       <key>id</key>
-      <value>sdrcourse_matched_filter_0</value>
+      <value>sdrcourse_mix_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -620,10 +643,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>taps</key>
-      <value></value>
     </param>
   </block>
   <block>
@@ -646,7 +665,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 428)</value>
+      <value>(496, 324)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -689,7 +708,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(768, 508)</value>
+      <value>(984, 316)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -740,7 +759,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 164)</value>
+      <value>(624, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -783,7 +802,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 176)</value>
+      <value>(408, 168)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -830,7 +849,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(416, 420)</value>
+      <value>(800, 60)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -838,7 +857,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>sdrcourse_symbol_mapper_0</value>
+      <value>sdrcourse_symbol_mapper_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -858,7 +877,7 @@
     </param>
   </block>
   <block>
-    <key>sdrcourse_symbol_sync_max</key>
+    <key>sdrcourse_symbol_mapper</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -877,7 +896,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 572)</value>
+      <value>(968, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -885,7 +904,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>sdrcourse_symbol_sync_max_0</value>
+      <value>sdrcourse_symbol_mapper_2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -896,8 +915,12 @@
       <value>0</value>
     </param>
     <param>
-      <key>sps</key>
-      <value></value>
+      <key>modtype</key>
+      <value>sdrcourse.BPSK</value>
+    </param>
+    <param>
+      <key>symbol_values</key>
+      <value>[0,1]</value>
     </param>
   </block>
   <connection>
@@ -931,22 +954,22 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>sdrcourse_framer_0</source_block_id>
-    <sink_block_id>sdrcourse_preamble_insert_0</sink_block_id>
-    <source_key>OUT</source_key>
+    <source_block_id>sdrcourse_crc_add_0</source_block_id>
+    <sink_block_id>sdrcourse_symbol_mapper_2</sink_block_id>
+    <source_key>out</source_key>
     <sink_key>IN</sink_key>
   </connection>
   <connection>
-    <source_block_id>sdrcourse_matched_filter_0</source_block_id>
-    <sink_block_id>sdrcourse_symbol_sync_max_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <source_block_id>sdrcourse_mix_0</source_block_id>
+    <sink_block_id>sdrcourse_preamble_insert_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>IN</sink_key>
   </connection>
   <connection>
     <source_block_id>sdrcourse_preamble_insert_0</source_block_id>
-    <sink_block_id>sdrcourse_symbol_mapper_0</sink_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>OUT</source_key>
-    <sink_key>IN</sink_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>sdrcourse_pulse_shaper_0</source_block_id>
@@ -956,9 +979,9 @@
   </connection>
   <connection>
     <source_block_id>sdrcourse_random_sourcecd_0</source_block_id>
-    <sink_block_id>sdrcourse_framer_0</sink_block_id>
+    <sink_block_id>sdrcourse_crc_add_0</sink_block_id>
     <source_key>OUT</source_key>
-    <sink_key>IN</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>sdrcourse_start_pending_0</source_block_id>
@@ -967,9 +990,15 @@
     <sink_key>IN</sink_key>
   </connection>
   <connection>
-    <source_block_id>sdrcourse_symbol_mapper_0</source_block_id>
-    <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
+    <source_block_id>sdrcourse_symbol_mapper_1</source_block_id>
+    <sink_block_id>sdrcourse_mix_0</sink_block_id>
     <source_key>OUT</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_key>in_h</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>sdrcourse_symbol_mapper_2</source_block_id>
+    <sink_block_id>sdrcourse_mix_0</sink_block_id>
+    <source_key>OUT</source_key>
+    <sink_key>in_p</sink_key>
   </connection>
 </flow_graph>
