@@ -28,7 +28,9 @@
 
 #define SQRT_TWO 0.707107
 
-
+/*
+     * define the modulation scheme in complex value
+  */
 float angle = M_PI / 8.0;
 const float level = sqrt(float(0.1));
 
@@ -70,7 +72,9 @@ namespace gr {
         message_port_register_out(pmt::mp("OUT"));
         set_msg_handler(pmt::mp("IN"), 		 
 		boost::bind(&symbol_mapper_impl::handle_map, this, _1));
-
+ /*
+     * choose the modulation scheme
+     */
 	switch(d_modtype){
 		case BPSK:
 		d_wmaps = std::vector<gr_complex>(&sym_bpsk[0], &sym_bpsk[2]);
@@ -111,7 +115,9 @@ namespace gr {
 			  }
 }
     
-
+ /*
+     * map the input sequence to complex point depends on the modulation scheme
+     */
        void symbol_mapper_impl::map(const uint8_t *in, gr_complex* out, int nsymbols)
        {   
 
@@ -128,7 +134,7 @@ namespace gr {
             uint16_t idx(0);
             for(int j=0; j<d_bps; j++)
 	     {
-                // sanity check - hopefully this does not slow things down too much
+                // sanity check
                 if(__builtin_expect( in[i*d_bps + j] > 0x01, false))
 		{
                     throw std::runtime_error((boost::format("ERROR: constellation mapper expects values of 0x00 and 0x01 in *ONLY* - received 0x%02x at bit offset %d!")% ((int)(in[i*d_bps+j]))%(d_bps*i)).str());

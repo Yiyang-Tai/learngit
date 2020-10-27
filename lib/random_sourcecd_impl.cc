@@ -18,6 +18,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+ /*
+     Generate payload where each element can be rewritten to an unsigned 8-bit integer array.
+  */
+
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -74,7 +79,10 @@ namespace gr {
 	int random;
 	double val = (double)rand() / RAND_MAX;
 	std::vector<unsigned char> vec(len);
+ /*
+     * Generate a vector contains 0 and 1 with 8 times payload length.
 
+ */
 	for (int i = 0; i < len; i++)
 	{
             if (val < d_bits_ratio)
@@ -83,6 +91,10 @@ namespace gr {
 		vec[i] = 1;
 	}
 	std::vector<unsigned char> out;
+ /*
+     * convert every 8 bits to an integer and store to the output
+
+ */
 	for (int j = 0; j < len; j++)
 
 	{ 

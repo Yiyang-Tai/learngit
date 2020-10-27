@@ -28,6 +28,10 @@
 #include <volk/volk.h>
 #include <boost/crc.hpp>
 
+/*
+     * this block add the crc behind the payload
+     */
+
 namespace gr {
   namespace sdrcourse {
 
@@ -76,7 +80,7 @@ namespace gr {
       _crc_impl.process_bytes(bytes_in, pkt_len);
       crc = _crc_impl();
       memcpy((void*)bytes_out, (const void*)bytes_in, pkt_len);
-      memcpy((void*)(bytes_out + pkt_len), &crc, 4); // FIXME big-endian/little-endian, this might be wrong
+      memcpy((void*)(bytes_out + pkt_len), &crc, 4); 
      std::vector<unsigned char> bits_out;
      Bytetobits(&bits_out, bytes_out);
       pmt::pmt_t output = pmt::init_u8vector(bits_out.size(), bits_out); // this copies the values from bytes_out into the u8vector

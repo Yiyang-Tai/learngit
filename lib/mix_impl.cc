@@ -24,7 +24,9 @@
 
 #include <gnuradio/io_signature.h>
 #include "mix_impl.h"
-
+ /*
+     * this block just joint two messages into one integer
+     */
 namespace gr {
   namespace sdrcourse {
 

@@ -18,6 +18,13 @@
  * Boston, MA 02110-1301, USA.
  */
 
+
+
+
+ /*
+     Sending message at a certain interval, but it is no matter if the block exists or not.
+ */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif

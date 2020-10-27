@@ -24,7 +24,9 @@
 
 #include <gnuradio/io_signature.h>
 #include "preamble_insert_impl.h"
-
+/*
+     * this block insert a given premble in front of payload
+     */
 namespace gr {
   namespace sdrcourse {
 

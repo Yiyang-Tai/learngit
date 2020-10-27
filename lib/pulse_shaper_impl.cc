@@ -81,7 +81,7 @@ namespace gr {
 	throw std::runtime_error("pulse_shaper_impl: error setting interpolator taps.\n");
       }
     }
-
+// convolution function
     void 
     pulse_shaper_impl::convolution(std::vector<gr_complex> input1, std::vector<gr_complex> input2, std::vector<gr_complex> out)
     {
